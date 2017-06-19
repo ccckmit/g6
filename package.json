@@ -1,0 +1,8 @@
+{
+  "name": "g6",
+  "version": "0.0.1",
+  "main": "main.js",
+  "devDependencies": {
+    "j6": "^1.0.1"
+  }
+}

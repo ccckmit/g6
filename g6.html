@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="lib/c3.css" rel="stylesheet"/>
+	<link href="lib/vis.css" rel="stylesheet"/>
+  <style>
+  .chart { width:30vw; height:30vw; border: 2px solid #aaaaaa; border-radius: 5px; display: inline-block; }
+  </style>
+</head>
+<body> <!--  onload="g6.view(__dirname + '/graph2d.json')"-->
+  <div id="chart1" class="chart">1</div>
+  <div id="chart2" class="chart">2</div>
+  <div id="chart3" class="chart">3</div>
+  <div id="chart4" class="chart">4</div>
+  <div id="chart5" class="chart">5</div>
+  <div id="chart6" class="chart">6</div>
+  <div id="chart7" class="chart">7</div>
+  <div id="chart8" class="chart">8</div>
+  <div id="chart9" class="chart">9</div>
+<!--  <script>delete module.exports</script> -->
+  <script>if (typeof module === 'object') { 
+    window.module = module; 
+    module = undefined; 
+  }
+//  if (remote != null) console = remote.console 
+  console.log('begin load d3.js...')
+  </script>
+  <script src="lib/d3.js"></script>
+  <script src="lib/c3.js"></script>
+  <script src="lib/vis.js"></script>
+  <script src="g6.js"></script>
+<!--  <script src="graphEx.js"></script> -->
+  <script>
+//    const remote = require('electron').remote
+//    var scriptFile = remote.process.argv[2]
+    g6.log('g6.print() message!')
+    g6.log('g6.print() message2!')
+    var scriptFile = window.location.hash.substring(1)
+    document.write(`<script src="${scriptFile}"/>`)
+  </script>
+  <script>if (window.module) module = window.module;</script>
+</body>
+</html>
